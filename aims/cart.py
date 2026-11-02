@@ -27,4 +27,8 @@ class Cart:
         return sum(item.cost for item in self.items)
 
     def print_cart(self): #"Nếu giỏ hàng trống thì nên in 'The cart is empty'" 
+
+        if(self.items.__len__ == 0): 
+            print(f"The cart is empty")
+            return
         print(f"Total cost: {self.total_cost():.2f} $")
