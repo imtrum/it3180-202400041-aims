@@ -4,8 +4,9 @@ MAX_NUMBERS_ORDERED = 20
 class Cart:
     """Giỏ hàng chứa tối đa MAX_NUMBERS_ORDERED đĩa DVD."""
 
-    def __init__(self):
+    def __init__(self, discount = 100):
         self.items = []
+        self.discount = discount
 
     def add_dvd(self, dvd):
         if len(self.items) > MAX_NUMBERS_ORDERED:
@@ -24,4 +25,4 @@ class Cart:
         return False
 
     def total_cost(self):
-        return sum(item.cost for item in self.items)
+        return sum(item.cost for item in self.items) * self.discount / 100;
