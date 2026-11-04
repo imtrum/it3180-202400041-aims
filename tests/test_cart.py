@@ -9,7 +9,7 @@ class TestCart(unittest.TestCase):
     def test_dvd_limit(self):
         cart = Cart()
 
-        for i in range(19):
+        for i in range(20):
             cart.items.append(i)
 
         dvd = DigitalVideoDisc(
