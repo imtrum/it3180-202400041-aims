@@ -6,8 +6,7 @@ class Cart:
 
     def __init__(self, discount = 100):
         if(discount > 100):
-            print("discount must be smaller than 100")
-            return False
+            raise ValueError("DVD cannot be None")
         self.items = []
         self.discount = discount
 
