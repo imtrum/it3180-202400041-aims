@@ -5,8 +5,11 @@ class Cart:
     """Giỏ hàng chứa tối đa MAX_NUMBERS_ORDERED đĩa DVD."""
 
     def __init__(self, discount = 100):
+        if(discount > 100):
+            raise ValueError("DVD cannot be None")
         self.items = []
         self.discount = discount
+
 
     def add_dvd(self, dvd):
         if len(self.items) > MAX_NUMBERS_ORDERED:
