@@ -12,7 +12,7 @@ class Cart:
 
 
     def add_dvd(self, dvd):
-        if len(self.items) > MAX_NUMBERS_ORDERED:
+        if len(self.items) >= MAX_NUMBERS_ORDERED:
             print("The cart is almost full")
             return False
         self.items.append(dvd)
@@ -29,3 +29,11 @@ class Cart:
 
     def total_cost(self):
         return sum(item.cost for item in self.items) * self.discount / 100;
+
+
+    def print_cart(self): #"Nếu giỏ hàng trống thì nên in 'The cart is empty'" 
+
+        if(self.items.__len__ == 0): 
+            print(f"The cart is empty")
+            return
+        print(f"Total cost: {self.total_cost():.2f} $")
