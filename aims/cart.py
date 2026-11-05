@@ -37,3 +37,9 @@ class Cart:
             print(f"The cart is empty")
             return
         print(f"Total cost: {self.total_cost():.2f} $")
+
+    def sort_by_title(self):
+        self.items.sort(key=lambda dvd: dvd.title.lower())
+
+    def sort_by_cost(self):
+        self.items.sort(key=lambda dvd: dvd.cost)
