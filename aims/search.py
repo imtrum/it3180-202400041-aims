@@ -1,3 +1,13 @@
-def search_by_title():
-    print("Search by title")
-    return
+
+def search_by_category(items, keyword):
+    return [
+        dvd for dvd in items
+        if keyword in dvd.category
+    ]
+
+
+def search_by_title(items, keyword):
+    return [
+        dvd for dvd in items
+        if keyword.lower() in dvd.title.lower()
+    ]
