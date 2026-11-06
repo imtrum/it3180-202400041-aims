@@ -16,3 +16,7 @@ All notable changes to this project are documented in this file.
 ### Changed
 - Improved the cart display by using `cart.print_cart()` instead of calling `print()` directly.
 
+## [1.0.1] - 2026-11-06
+
+### Fixed
+- Make title search case-insensitive.
