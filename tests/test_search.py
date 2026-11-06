@@ -15,7 +15,6 @@ class TestSearch(unittest.TestCase):
 
     def test_search_by_title(self):
         result = search_by_title(self.dvds, "lion")
-
         self.assertEqual(
             [dvd.title for dvd in result],
             ["The Lion King"]
@@ -23,7 +22,6 @@ class TestSearch(unittest.TestCase):
 
     def test_search_by_category(self):
         result = search_by_category(self.dvds, "animation")
-
         self.assertEqual(
             [dvd.title for dvd in result],
             ["The Lion King", "Finding Nemo"]
