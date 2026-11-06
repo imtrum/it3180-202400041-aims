@@ -2,6 +2,11 @@
 
 All notable changes to this project are documented in this file.
 
+
+## [1.0.1] - 2026-11-06
+
+### Fixed
+- Make title search case-insensitive.
 ## [1.0.0] - 2026-11-05
 
 ### Added
